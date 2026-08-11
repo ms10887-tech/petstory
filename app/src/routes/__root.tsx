@@ -7,16 +7,11 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
-import { NotFound } from "@higgsfield/quanta/not-found";
-
+import type { ReactNode } from "react";
 import appCss from "../styles.css?url";
-import { reportHiggsfieldError } from "../lib/higgsfield-error-reporting";
 import appMetaJson from "../app-meta.json";
 import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
-
-declare const __HF_DESIGN_INSPECTOR__: boolean;
 
 const DEFAULT_TITLE = "The Pet Story Co.";
 const DEFAULT_DESCRIPTION =
@@ -120,9 +115,6 @@ function NotFoundComponent() {
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
-  useEffect(() => {
-    reportHiggsfieldError(error, { boundary: "tanstack_root_error_component" });
-  }, [error]);
 
   return (
     <div className="flex min-h-dvh flex-col items-center justify-center bg-[#FAF8F4] px-6 text-center">
@@ -168,25 +160,6 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-
-  useEffect(() => {
-    if (!__HF_DESIGN_INSPECTOR__) {
-      return;
-    }
-
-    void import("../module/design-inspector/runtime")
-      .then(({ installHiggsfieldDesignInspector }) => {
-        installHiggsfieldDesignInspector();
-      })
-      .catch((error) => {
-        reportHiggsfieldError(
-          error instanceof Error ? error : new Error("Failed to load design inspector"),
-          {
-            boundary: "higgsfield_design_inspector_import",
-          },
-        );
-      });
-  }, []);
 
   return (
     <QueryClientProvider client={queryClient}>

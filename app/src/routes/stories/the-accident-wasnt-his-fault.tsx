@@ -17,29 +17,24 @@ export const Route = createFileRoute("/stories/the-accident-wasnt-his-fault")({
 function StoryPage() {
   return (
     <div className="bg-[#FAF8F4]">
-      {/* Video placeholder */}
+      {/* Approved brand introduction video */}
       <section className="border-b border-[#D8D3C9]">
         <div className="mx-auto max-w-4xl px-6 py-12">
           <Link to="/stories" className="text-sm text-[#B8654A] hover:underline">
             ← All stories
           </Link>
-          <div className="mt-6 aspect-video overflow-hidden rounded-2xl border border-[#D8D3C9] bg-[#1C1B1A] relative">
-            <img
-              src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_b1415888-910e-4d40-85c0-86707c365dc6.png"
-              alt="Puppy from the story"
-              className="h-full w-full object-cover opacity-60"
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-                    <polygon points="5 3 19 12 5 21 5 3" />
-                  </svg>
-                </div>
-                <p className="text-white/90">Video coming soon</p>
-                <p className="mt-1 text-sm text-white/60">90 seconds · Vertical</p>
-              </div>
-            </div>
+          <div className="mt-6 aspect-video overflow-hidden rounded-2xl border border-[#D8D3C9] bg-[#1C1B1A]">
+            <video
+              controls
+              playsInline
+              preload="metadata"
+              poster="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_b1415888-910e-4d40-85c0-86707c365dc6.png"
+              className="h-full w-full object-cover"
+              aria-label="Meet The Pet Story Co. brand introduction"
+            >
+              <source src="/videos/meet-the-pet-story-co.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
           </div>
         </div>
       </section>

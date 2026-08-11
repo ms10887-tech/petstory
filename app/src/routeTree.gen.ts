@@ -9,63 +9,28 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as LinksRouteImport } from './routes/links'
-import { Route as DisclosureRouteImport } from './routes/disclosure'
-import { Route as ContactRouteImport } from './routes/contact'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as CharactersRouteImport } from './routes/characters'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as StoriesIndexRouteImport } from './routes/stories/index'
-import { Route as RecommendIndexRouteImport } from './routes/recommend/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as CharactersRouteImport } from './routes/characters'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DisclosureRouteImport } from './routes/disclosure'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as LinksRouteImport } from './routes/links'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as RobotsDottxtRouteImport } from './routes/robots[.]txt'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
-import { Route as StoriesTheAccidentWasntHisFaultRouteImport } from './routes/stories/the-accident-wasnt-his-fault'
-import { Route as RecommendPottyTrainingRouteImport } from './routes/recommend/potty-training'
-import { Route as BlogWhyPuppyAccidentsArentHisFaultRouteImport } from './routes/blog/why-puppy-accidents-arent-his-fault'
-import { Route as BlogHowToReadPuppySignalsRouteImport } from './routes/blog/how-to-read-puppy-signals'
 import { Route as BlogFivePottyTrainingMistakesRouteImport } from './routes/blog/five-potty-training-mistakes'
+import { Route as BlogHowToReadPuppySignalsRouteImport } from './routes/blog/how-to-read-puppy-signals'
+import { Route as BlogWhyPuppyAccidentsArentHisFaultRouteImport } from './routes/blog/why-puppy-accidents-arent-his-fault'
+import { Route as RecommendIndexRouteImport } from './routes/recommend/index'
+import { Route as RecommendPottyTrainingRouteImport } from './routes/recommend/potty-training'
+import { Route as StoriesIndexRouteImport } from './routes/stories/index'
+import { Route as StoriesTheAccidentWasntHisFaultRouteImport } from './routes/stories/the-accident-wasnt-his-fault'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
-  id: '/robots.txt',
-  path: '/robots.txt',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LinksRoute = LinksRouteImport.update({
-  id: '/links',
-  path: '/links',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const DisclosureRoute = DisclosureRouteImport.update({
-  id: '/disclosure',
-  path: '/disclosure',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ContactRoute = ContactRouteImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CharactersRoute = CharactersRouteImport.update({
-  id: '/characters',
-  path: '/characters',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -73,19 +38,44 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CharactersRoute = CharactersRouteImport.update({
+  id: '/characters',
+  path: '/characters',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StoriesIndexRoute = StoriesIndexRouteImport.update({
-  id: '/stories/',
-  path: '/stories/',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const RecommendIndexRoute = RecommendIndexRouteImport.update({
-  id: '/recommend/',
-  path: '/recommend/',
+const DisclosureRoute = DisclosureRouteImport.update({
+  id: '/disclosure',
+  path: '/disclosure',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LinksRoute = LinksRouteImport.update({
+  id: '/links',
+  path: '/links',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RobotsDottxtRoute = RobotsDottxtRouteImport.update({
+  id: '/robots.txt',
+  path: '/robots.txt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -93,21 +83,10 @@ const BlogIndexRoute = BlogIndexRouteImport.update({
   path: '/blog/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const StoriesTheAccidentWasntHisFaultRoute =
-  StoriesTheAccidentWasntHisFaultRouteImport.update({
-    id: '/stories/the-accident-wasnt-his-fault',
-    path: '/stories/the-accident-wasnt-his-fault',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const RecommendPottyTrainingRoute = RecommendPottyTrainingRouteImport.update({
-  id: '/recommend/potty-training',
-  path: '/recommend/potty-training',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogWhyPuppyAccidentsArentHisFaultRoute =
-  BlogWhyPuppyAccidentsArentHisFaultRouteImport.update({
-    id: '/blog/why-puppy-accidents-arent-his-fault',
-    path: '/blog/why-puppy-accidents-arent-his-fault',
+const BlogFivePottyTrainingMistakesRoute =
+  BlogFivePottyTrainingMistakesRouteImport.update({
+    id: '/blog/five-potty-training-mistakes',
+    path: '/blog/five-potty-training-mistakes',
     getParentRoute: () => rootRouteImport,
   } as any)
 const BlogHowToReadPuppySignalsRoute =
@@ -116,10 +95,31 @@ const BlogHowToReadPuppySignalsRoute =
     path: '/blog/how-to-read-puppy-signals',
     getParentRoute: () => rootRouteImport,
   } as any)
-const BlogFivePottyTrainingMistakesRoute =
-  BlogFivePottyTrainingMistakesRouteImport.update({
-    id: '/blog/five-potty-training-mistakes',
-    path: '/blog/five-potty-training-mistakes',
+const BlogWhyPuppyAccidentsArentHisFaultRoute =
+  BlogWhyPuppyAccidentsArentHisFaultRouteImport.update({
+    id: '/blog/why-puppy-accidents-arent-his-fault',
+    path: '/blog/why-puppy-accidents-arent-his-fault',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const RecommendIndexRoute = RecommendIndexRouteImport.update({
+  id: '/recommend/',
+  path: '/recommend/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RecommendPottyTrainingRoute = RecommendPottyTrainingRouteImport.update({
+  id: '/recommend/potty-training',
+  path: '/recommend/potty-training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoriesIndexRoute = StoriesIndexRouteImport.update({
+  id: '/stories/',
+  path: '/stories/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoriesTheAccidentWasntHisFaultRoute =
+  StoriesTheAccidentWasntHisFaultRouteImport.update({
+    id: '/stories/the-accident-wasnt-his-fault',
+    path: '/stories/the-accident-wasnt-his-fault',
     getParentRoute: () => rootRouteImport,
   } as any)
 
@@ -270,32 +270,32 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/robots.txt': {
-      id: '/robots.txt'
-      path: '/robots.txt'
-      fullPath: '/robots.txt'
-      preLoaderRoute: typeof RobotsDottxtRouteImport
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
+    '/characters': {
+      id: '/characters'
+      path: '/characters'
+      fullPath: '/characters'
+      preLoaderRoute: typeof CharactersRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/links': {
-      id: '/links'
-      path: '/links'
-      fullPath: '/links'
-      preLoaderRoute: typeof LinksRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/disclosure': {
@@ -312,46 +312,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/contact': {
-      id: '/contact'
-      path: '/contact'
-      fullPath: '/contact'
-      preLoaderRoute: typeof ContactRouteImport
+    '/links': {
+      id: '/links'
+      path: '/links'
+      fullPath: '/links'
+      preLoaderRoute: typeof LinksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/characters': {
-      id: '/characters'
-      path: '/characters'
-      fullPath: '/characters'
-      preLoaderRoute: typeof CharactersRouteImport
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
+    '/robots.txt': {
+      id: '/robots.txt'
+      path: '/robots.txt'
+      fullPath: '/robots.txt'
+      preLoaderRoute: typeof RobotsDottxtRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/stories/': {
-      id: '/stories/'
-      path: '/stories'
-      fullPath: '/stories/'
-      preLoaderRoute: typeof StoriesIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recommend/': {
-      id: '/recommend/'
-      path: '/recommend'
-      fullPath: '/recommend/'
-      preLoaderRoute: typeof RecommendIndexRouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -361,25 +347,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/stories/the-accident-wasnt-his-fault': {
-      id: '/stories/the-accident-wasnt-his-fault'
-      path: '/stories/the-accident-wasnt-his-fault'
-      fullPath: '/stories/the-accident-wasnt-his-fault'
-      preLoaderRoute: typeof StoriesTheAccidentWasntHisFaultRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/recommend/potty-training': {
-      id: '/recommend/potty-training'
-      path: '/recommend/potty-training'
-      fullPath: '/recommend/potty-training'
-      preLoaderRoute: typeof RecommendPottyTrainingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog/why-puppy-accidents-arent-his-fault': {
-      id: '/blog/why-puppy-accidents-arent-his-fault'
-      path: '/blog/why-puppy-accidents-arent-his-fault'
-      fullPath: '/blog/why-puppy-accidents-arent-his-fault'
-      preLoaderRoute: typeof BlogWhyPuppyAccidentsArentHisFaultRouteImport
+    '/blog/five-potty-training-mistakes': {
+      id: '/blog/five-potty-training-mistakes'
+      path: '/blog/five-potty-training-mistakes'
+      fullPath: '/blog/five-potty-training-mistakes'
+      preLoaderRoute: typeof BlogFivePottyTrainingMistakesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/how-to-read-puppy-signals': {
@@ -389,11 +361,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogHowToReadPuppySignalsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/blog/five-potty-training-mistakes': {
-      id: '/blog/five-potty-training-mistakes'
-      path: '/blog/five-potty-training-mistakes'
-      fullPath: '/blog/five-potty-training-mistakes'
-      preLoaderRoute: typeof BlogFivePottyTrainingMistakesRouteImport
+    '/blog/why-puppy-accidents-arent-his-fault': {
+      id: '/blog/why-puppy-accidents-arent-his-fault'
+      path: '/blog/why-puppy-accidents-arent-his-fault'
+      fullPath: '/blog/why-puppy-accidents-arent-his-fault'
+      preLoaderRoute: typeof BlogWhyPuppyAccidentsArentHisFaultRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recommend/': {
+      id: '/recommend/'
+      path: '/recommend'
+      fullPath: '/recommend/'
+      preLoaderRoute: typeof RecommendIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/recommend/potty-training': {
+      id: '/recommend/potty-training'
+      path: '/recommend/potty-training'
+      fullPath: '/recommend/potty-training'
+      preLoaderRoute: typeof RecommendPottyTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stories/': {
+      id: '/stories/'
+      path: '/stories'
+      fullPath: '/stories/'
+      preLoaderRoute: typeof StoriesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stories/the-accident-wasnt-his-fault': {
+      id: '/stories/the-accident-wasnt-his-fault'
+      path: '/stories/the-accident-wasnt-his-fault'
+      fullPath: '/stories/the-accident-wasnt-his-fault'
+      preLoaderRoute: typeof StoriesTheAccidentWasntHisFaultRouteImport
       parentRoute: typeof rootRouteImport
     }
   }

@@ -1,11 +1,9 @@
-/* Cascade layer order: reset lowest, then Tailwind/Quanta base, then
+/* Cascade layer order: reset lowest, then Tailwind base, then
  * components and finally utilities. */
 @layer reset, theme, base, components, utilities;
 
 @import "tailwindcss" source(none);
 @source "../src";
-@source "../packages/quanta/src";
-@import "@higgsfield/quanta/tailwind.css";
 
 @layer reset {
   * {

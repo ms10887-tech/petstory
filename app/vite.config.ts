@@ -1,31 +1,12 @@
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import {
-  higgsfieldDesignInspectorVitePlugin,
-  higgsfieldDesignSourceBabelPlugin,
-} from "./src/module/design-inspector/vite";
 import svgr from "vite-plugin-svgr";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { fileURLToPath } from "node:url";
 
-// The vendored @higgsfield/quanta components import their glyphs from the private
-// Nexus-only `@higgsfield-ai/icons`. Generated sites build on the PUBLIC npm
-// registry, so we redirect every `@higgsfield-ai/icons/*` import to a Material
-// Symbols shim instead (see src/lib/quanta-material-icons.ts). tsconfig.json has
-// the matching `paths` entry so type-checking resolves it too.
-const QUANTA_ICONS_SHIM = fileURLToPath(
-  new URL("./src/lib/quanta-material-icons.ts", import.meta.url),
-);
-
-export default defineConfig(({ mode }) => {
-  const designInspectorEnabled = process.env.HF_DESIGN_INSPECTOR === "1" || mode === "design";
-
+export default defineConfig(() => {
   return {
-    resolve: {
-      alias: [{ find: /^@higgsfield-ai\/icons(\/.*)?$/, replacement: QUANTA_ICONS_SHIM }],
-    },
     // The server bundle runs as a Cloudflare Worker — there is no node_modules
     // at runtime. Vite's default SSR build leaves npm deps as bare external
     // imports (h3, react, @tanstack/*, seroval, …), which resolve on a Node
@@ -74,12 +55,7 @@ export default defineConfig(({ mode }) => {
       tanstackStart({
         server: { entry: "server" },
       }),
-      higgsfieldDesignInspectorVitePlugin(designInspectorEnabled),
-      react({
-        babel: {
-          plugins: designInspectorEnabled ? [higgsfieldDesignSourceBabelPlugin] : [],
-        },
-      }),
+      react(),
       tailwindcss(),
       tsconfigPaths(),
     ],
