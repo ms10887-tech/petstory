@@ -1,0 +1,205 @@
+/* Cascade layer order: reset lowest, then Tailwind/Quanta base, then
+ * components and finally utilities. */
+@layer reset, theme, base, components, utilities;
+
+@import "tailwindcss" source(none);
+@source "../src";
+@source "../packages/quanta/src";
+@import "@higgsfield/quanta/tailwind.css";
+
+@layer reset {
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* =========================================================
+   THE PET STORY CO. — THEME TOKENS
+   Palette: warm paper + terracotta accent + sage secondary
+   ========================================================= */
+@theme {
+  --spacing: 0.25rem;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-full: 9999px;
+}
+
+@theme inline {
+  /* Core palette */
+  --color-paper: #FAF8F4;
+  --color-cream: #F3EFE7;
+  --color-stone: #D8D3C9;
+  --color-charcoal: #1C1B1A;
+  --color-warm-gray: #5B5854;
+  --color-terracotta: #B8654A;
+  --color-terracotta-dark: #9C4F38;
+  --color-sage: #7A8C6F;
+  --color-sage-dark: #607056;
+}
+
+:root {
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    background-color: #FAF8F4;
+    color: #1C1B1A;
+    font-family: "Outfit", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  body {
+    background-color: #FAF8F4;
+    color: #1C1B1A;
+    min-height: 100vh;
+  }
+  h1, h2, h3, h4 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: #1C1B1A;
+  }
+  p {
+    color: #5B5854;
+    line-height: 1.65;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.75rem;
+    background-color: #B8654A;
+    color: #FAF8F4;
+    border-radius: 9999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #B8654A;
+  }
+  .btn-primary:hover {
+    background-color: #9C4F38;
+    border-color: #9C4F38;
+    transform: translateY(-1px);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.75rem;
+    background-color: transparent;
+    color: #B8654A;
+    border-radius: 9999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1.5px solid #B8654A;
+  }
+  .btn-secondary:hover {
+    background-color: #B8654A;
+    color: #FAF8F4;
+    transform: translateY(-1px);
+  }
+  .btn-secondary:active {
+    transform: translateY(0);
+  }
+
+  .btn-sage {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.75rem;
+    background-color: #7A8C6F;
+    color: #FAF8F4;
+    border-radius: 9999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid #7A8C6F;
+  }
+  .btn-sage:hover {
+    background-color: #607056;
+    border-color: #607056;
+    transform: translateY(-1px);
+  }
+  .btn-sage:active {
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    color: #5B5854;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.15s ease;
+  }
+  .nav-link:hover {
+    color: #B8654A;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #B8654A;
+    font-weight: 500;
+  }
+
+  .card {
+    background: white;
+    border-radius: 1rem;
+    border: 1px solid #D8D3C9;
+    padding: 2rem;
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    border-color: #B8654A;
+  }
+
+  .prose-custom p {
+    color: #5B5854;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+  .prose-custom h2 {
+    font-size: 1.75rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .prose-custom h3 {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .prose-custom ul, .prose-custom ol {
+    color: #5B5854;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+  }
+  .prose-custom li {
+    margin-bottom: 0.5rem;
+  }
+  .prose-custom blockquote {
+    border-left: 3px solid #B8654A;
+    padding-left: 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #1C1B1A;
+  }
+}
