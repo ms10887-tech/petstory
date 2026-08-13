@@ -51,7 +51,7 @@ function RecommendIndex() {
       excerpt:
         "Disposable training pads with activated carbon for odor control and a leak-resistant design. A practical option for the first weeks of potty training or apartment living.",
       category: "Potty training",
-      asin: "B08D3Y5YVB",
+      asin: "B01LWS9514",
       type: "amazon",
       image: "/products/amazon/glad-pads.png",
       featured: true,
