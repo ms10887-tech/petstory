@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { NewsletterForm } from "../components/NewsletterForm";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -322,16 +323,7 @@ function Index() {
             dog story and a practical lesson when it's ready.
           </p>
 
-          <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 rounded-full border border-[#D8D3C9] bg-white px-5 py-3 text-[#1C1B1A] placeholder:text-[#5B5854]/60 focus:border-[#B8654A] focus:outline-none"
-            />
-            <button type="submit" className="btn-sage">
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm />
           <p className="mt-4 text-xs text-[#5B5854]">
             No spam. Unsubscribe anytime. We'd never sell your email.
           </p>

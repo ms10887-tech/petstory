@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { NewsletterForm } from "../../components/NewsletterForm";
 
 const AMAZON_TAG = "wisepawsstori-20";
 
@@ -147,19 +148,7 @@ function RecommendIndex() {
               Subscribe below and we'll let you know when the next one is
               ready.
             </p>
-            <form
-              className="mx-auto mt-6 flex max-w-sm flex-col gap-3 sm:flex-row"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input
-                type="email"
-                placeholder="your@email.com"
-                className="flex-1 rounded-full border border-[#D8D3C9] bg-white px-5 py-2.5 text-sm text-[#1C1B1A] placeholder:text-[#5B5854]/60 focus:border-[#B8654A] focus:outline-none"
-              />
-              <button type="submit" className="btn-sage">
-                Subscribe
-              </button>
-            </form>
+            <NewsletterForm compact />
           </div>
         </div>
       </section>
