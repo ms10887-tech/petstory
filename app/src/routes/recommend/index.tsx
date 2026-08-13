@@ -43,6 +43,7 @@ function RecommendIndex() {
       url: "/recommend/potty-training",
       type: "review",
       price: "~$19",
+      image: "/products/potty-training-7-days/main-guide.png",
       featured: true,
     },
     {
@@ -52,6 +53,7 @@ function RecommendIndex() {
       category: "Potty training",
       asin: "B08D3Y5YVB",
       type: "amazon",
+      image: "/products/amazon/glad-pads.png",
       featured: true,
     },
     {
@@ -61,6 +63,7 @@ function RecommendIndex() {
       category: "Potty training",
       asin: "B09G4CKKYT",
       type: "amazon",
+      image: "/products/amazon/green-lifestyle-pads.jpg",
     },
     {
       title: "Rocco & Roxie Stain & Odor Eliminator",
@@ -69,6 +72,7 @@ function RecommendIndex() {
       category: "Cleaning",
       asin: "B00CKFL93K",
       type: "amazon",
+      image: "/products/amazon/rocco-roxie-cleaner.png",
       featured: true,
     },
     {
@@ -76,16 +80,18 @@ function RecommendIndex() {
       excerpt:
         "Soft, bite-sized puppy treats that are easy to use as quick rewards. Keep portions small and reward immediately after your puppy toilets in the right place.",
       category: "Treats",
-      asin: "B07D33S2X3",
+      asin: "B08MV5Y4BM",
       type: "amazon",
+      image: "/products/amazon/wellness-puppy-bites.jpg",
     },
     {
-      title: "JEXCULL Pet Training Bells — 2 Pack",
+      title: "PoochieBells Adjustable Dog Doorbell",
       excerpt:
-        "Simple communication bells you can teach your puppy to ring before going outside. They support a clear potty routine without relying on an expensive automatic system.",
+        "Adjustable door bells you can teach your puppy to ring before going outside. They support a clear potty routine and can be positioned at your dog's nose height.",
       category: "Potty training",
-      asin: "B09KHB3CBX",
+      asin: "B07NJ1YKBJ",
       type: "amazon",
+      image: "/products/amazon/poochiebells.jpg",
     },
   ];
 
@@ -167,8 +173,16 @@ function ProductCardContent({ rec }: { rec: Product }) {
   return (
     <div className="grid gap-6 p-6 md:grid-cols-3 md:p-8">
       <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl bg-[#F3EFE7] md:col-span-1">
-        <div className="text-center">
-          {rec.type === "amazon" ? (
+        {rec.image ? (
+          <img
+            src={rec.image}
+            alt={rec.title}
+            loading="lazy"
+            className="h-full w-full object-contain p-3"
+          />
+        ) : (
+          <div className="text-center">
+            {rec.type === "amazon" ? (
             <div className="px-5 text-center">
               <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#B8654A]/10 text-xl text-[#B8654A]">
                 {rec.category === "Cleaning" ? "Clean" : rec.category === "Treats" ? "Treat" : "Train"}
@@ -177,12 +191,11 @@ function ProductCardContent({ rec }: { rec: Product }) {
                 Product details on Amazon
               </span>
             </div>
-          ) : (
-            <span className="text-xs text-[#5B5854]">
-              Product image
-            </span>
-          )}
-        </div>
+            ) : (
+              <span className="text-xs text-[#5B5854]">Product image</span>
+            )}
+          </div>
+        )}
       </div>
       <div className="md:col-span-2">
         <div className="flex items-center gap-3">
