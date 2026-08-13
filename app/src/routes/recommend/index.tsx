@@ -25,7 +25,7 @@ type Product = {
   title: string;
   excerpt: string;
   category: string;
-  price: string;
+  price?: string;
   image?: string;
   type: "review" | "amazon";
   url?: string;
@@ -48,49 +48,44 @@ function RecommendIndex() {
     {
       title: "Glad for Pets Activated Carbon Training Pads",
       excerpt:
-        "Super absorbent disposable pads with activated carbon for odor control. Leak-proof 6-layer design with pheromone attractant to help guide your puppy to the right spot.",
+        "Disposable training pads with activated carbon for odor control and a leak-resistant design. A practical option for the first weeks of potty training or apartment living.",
       category: "Potty training",
       asin: "B08D3Y5YVB",
       type: "amazon",
-      price: "~$27",
       featured: true,
     },
     {
       title: "GREEN LIFESTYLE Washable Pee Pads",
       excerpt:
-        "Reusable, machine-washable pads with anti-slip backing that stay in place. Super absorbent and waterproof — saves money over disposables and is better for the environment.",
+        "Reusable, machine-washable pads with a non-slip backing. A useful lower-waste alternative to disposable pads for repeat accidents and indoor training areas.",
       category: "Potty training",
       asin: "B09G4CKKYT",
       type: "amazon",
-      price: "~$22",
     },
     {
       title: "Rocco & Roxie Stain & Odor Eliminator",
       excerpt:
-        "Professional strength enzymatic cleaner that eliminates urine stains and odors completely. #1 Best Seller in Dog Stain Removers on Amazon. Safe for carpets, floors, and furniture.",
+        "An enzyme-based cleaner made for pet stains and odors on carpets and other water-safe surfaces. A sensible cleanup companion while your puppy is still learning.",
       category: "Cleaning",
       asin: "B00CKFL93K",
       type: "amazon",
-      price: "~$19",
       featured: true,
     },
     {
       title: "Wellness Soft Puppy Bites Training Treats",
       excerpt:
-        "Soft, bite-sized training treats made with real meat and DHA for puppy brain development. No corn, wheat, or soy — perfect high-value reward for potty training sessions.",
+        "Soft, bite-sized puppy treats that are easy to use as quick rewards. Keep portions small and reward immediately after your puppy toilets in the right place.",
       category: "Treats",
       asin: "B07D33S2X3",
       type: "amazon",
-      price: "~$8",
     },
     {
-      title: "BrilliantPad Self-Cleaning Indoor Dog Potty",
+      title: "JEXCULL Pet Training Bells — 2 Pack",
       excerpt:
-        "Automatic self-cleaning potty system that wraps and seals waste. Odor-free, mess-free, and always clean for your pup. Ideal for apartments and small dogs under 25 lbs.",
+        "Simple communication bells you can teach your puppy to ring before going outside. They support a clear potty routine without relying on an expensive automatic system.",
       category: "Potty training",
-      asin: "B07GRGBQHG",
+      asin: "B09KHB3CBX",
       type: "amazon",
-      price: "~$150",
     },
   ];
 
@@ -128,7 +123,7 @@ function RecommendIndex() {
                   <a
                     href={amazonLink(rec.asin!)}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="sponsored noopener noreferrer"
                     className="block"
                   >
                     <ProductCardContent rec={rec} />
@@ -157,10 +152,10 @@ function RecommendIndex() {
       <section className="border-t border-[#D8D3C9] bg-[#F3EFE7]">
         <div className="mx-auto max-w-3xl px-6 py-10 text-center">
           <p className="text-sm text-[#5B5854]">
-            <strong>Affiliate disclosure:</strong> Some links on this page are
-            affiliate links, which means we may earn a commission if you decide
-            to buy. This doesn't change the price for you. We only recommend
-            products we believe genuinely help. The story always comes first.
+            <strong>Affiliate disclosure:</strong> As an Amazon Associate I earn
+            from qualifying purchases. Other links may also be affiliate links,
+            which means we may earn a commission if you buy through them. This
+            doesn't change the price for you.
           </p>
         </div>
       </section>
@@ -174,9 +169,14 @@ function ProductCardContent({ rec }: { rec: Product }) {
       <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-xl bg-[#F3EFE7] md:col-span-1">
         <div className="text-center">
           {rec.type === "amazon" ? (
-            <span className="text-xs text-[#5B5854]">
-              View on Amazon
-            </span>
+            <div className="px-5 text-center">
+              <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#B8654A]/10 text-xl text-[#B8654A]">
+                {rec.category === "Cleaning" ? "Clean" : rec.category === "Treats" ? "Treat" : "Train"}
+              </span>
+              <span className="mt-3 block text-xs text-[#5B5854]">
+                Product details on Amazon
+              </span>
+            </div>
           ) : (
             <span className="text-xs text-[#5B5854]">
               Product image
@@ -200,9 +200,11 @@ function ProductCardContent({ rec }: { rec: Product }) {
         </h3>
         <p className="mt-3 text-[#5B5854]">{rec.excerpt}</p>
         <div className="mt-4 flex items-center gap-4">
-          <span className="rounded-lg bg-[#F3EFE7] px-3 py-1 text-sm font-medium text-[#1C1B1A]">
-            {rec.price}
-          </span>
+          {rec.price && (
+            <span className="rounded-lg bg-[#F3EFE7] px-3 py-1 text-sm font-medium text-[#1C1B1A]">
+              {rec.price}
+            </span>
+          )}
           {rec.type === "review" ? (
             <span className="inline-flex items-center gap-1 text-sm font-medium text-[#B8654A]">
               Read our full review
