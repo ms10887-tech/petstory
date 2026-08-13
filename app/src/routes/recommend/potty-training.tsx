@@ -15,6 +15,14 @@ export const Route = createFileRoute("/recommend/potty-training")({
 });
 
 function PottyTrainingRecommend() {
+  const productImages = [
+    { src: "/products/potty-training-7-days/main-guide.png", alt: "Potty Training in 7 Days digital guide cover", label: "Main guide" },
+    { src: "/products/potty-training-7-days/bonus-crate-training.png", alt: "Crate Training Mastery bonus guide cover", label: "Crate training" },
+    { src: "/products/potty-training-7-days/bonus-cleanup.png", alt: "Emergency Cleanup and Odor Elimination bonus guide cover", label: "Cleanup guide" },
+    { src: "/products/potty-training-7-days/bonus-puppy-fast-track.png", alt: "Puppy Potty Training Fast-Track bonus guide cover", label: "Puppy fast-track" },
+    { src: "/products/potty-training-7-days/bonus-apartment.png", alt: "Apartment and Small Space Solutions bonus guide cover", label: "Apartment guide" },
+  ];
+
   return (
     <div className="bg-[#FAF8F4]">
       {/* Hero */}
@@ -44,6 +52,60 @@ function PottyTrainingRecommend() {
               honest opinion.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Product view */}
+      <section className="border-b border-[#D8D3C9] bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-16">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="eyebrow mb-3 block">What you receive</span>
+            <h2 className="text-2xl font-semibold text-[#1C1B1A] md:text-3xl">
+              The complete digital guide bundle
+            </h2>
+            <p className="mt-3 text-[#5B5854]">
+              One main 7-day training system and four focused bonus guides,
+              delivered as instant PDF downloads.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-[1.35fr_1fr]">
+            <figure className="overflow-hidden rounded-2xl border border-[#D8D3C9] bg-[#F3EFE7] p-5 sm:p-8">
+              <img
+                src={productImages[0].src}
+                alt={productImages[0].alt}
+                className="mx-auto aspect-[2/3] max-h-[580px] w-full object-contain drop-shadow-xl"
+              />
+              <figcaption className="mt-5 text-center text-sm font-medium text-[#5B5854]">
+                Main guide · Potty Training in 7 Days
+              </figcaption>
+            </figure>
+
+            <div className="grid grid-cols-2 gap-4">
+              {productImages.slice(1).map((image) => (
+                <figure
+                  key={image.src}
+                  className="flex min-w-0 flex-col overflow-hidden rounded-xl border border-[#D8D3C9] bg-[#FAF8F4] p-3 sm:p-4"
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    loading="lazy"
+                    className="mx-auto aspect-[2/3] min-h-0 w-full flex-1 object-contain drop-shadow-md"
+                  />
+                  <figcaption className="mt-3 text-center text-xs font-medium text-[#5B5854] sm:text-sm">
+                    {image.label}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-[#5B5854]">
+            Product images are shown for identification. This is a digital
+            product; no physical books are shipped. Offer contents and pricing
+            are controlled by the product publisher and may change.
+          </p>
         </div>
       </section>
 
