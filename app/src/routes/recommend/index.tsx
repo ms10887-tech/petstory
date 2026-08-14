@@ -53,7 +53,7 @@ function RecommendIndex() {
       category: "Potty training",
       asin: "B01LWS9514",
       type: "amazon",
-      image: "/products/amazon/glad-pads.png",
+      image: "/products/amazon/glad-pads.jpg",
       featured: true,
     },
     {
