@@ -289,7 +289,7 @@ function Index() {
               {
                 title: "The 5 Potty Training Mistakes Most New Owners Make",
                 excerpt:
-                  "Taking them out too often. Punishing after the fact. Inconsistent schedules. These are the mistakes that make potty training take twice as long.",
+                  "Waiting too long between breaks. Punishing after the fact. Inconsistent schedules. Five common mistakes and gentler ways forward.",
                 category: "Potty training",
                 url: "/blog/five-potty-training-mistakes",
                 image:

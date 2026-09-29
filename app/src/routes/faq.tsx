@@ -9,7 +9,7 @@ const faqStructuredData = {
       name: "How long does it really take to potty train a puppy?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most puppies start getting the hang of it within 4 to 6 weeks of consistent training, but fully trained usually takes 4 to 6 months. The key is consistency — a clear schedule, frequent bathroom breaks, and the same routine every time. Puppies under 12 weeks old have very little bladder control and physically can't hold it longer than 2-3 hours. By 6 months, most can hold it through the night if trained properly. A structured 7-day method can accelerate this significantly by building a clear routine from day one.",
+        text: "House training takes time and varies by puppy. A clear routine, frequent bathroom breaks, supervision, and rewards for going in the right place help. Very young puppies have limited bladder control and may need breaks every 1-2 hours while awake, as well as after waking, eating, drinking, or playing. A seven-day plan can help you establish a routine, but it does not guarantee a fully trained puppy in one week.",
       },
     },
     {
@@ -113,20 +113,18 @@ const faqs = [
     answer: (
       <>
         <p>
-          Most puppies start getting the hang of it within 4 to 6 weeks of
-          consistent training, but "fully trained" usually takes 4 to 6 months.
-          The key word is <em>consistent</em> — a clear schedule, frequent
-          bathroom breaks, and the same routine every time.
+          House training takes time, and every puppy learns at a different
+          pace. The key is a consistent routine with frequent bathroom breaks,
+          supervision, and rewards for going in the right place.
         </p>
         <p>
-          Puppies under 12 weeks old have very little bladder control. They
-          physically can't hold it longer than 2-3 hours. As they grow, their
-          capacity increases. By 6 months, most can hold it through the night
-          if trained properly.
+          Very young puppies have limited bladder control and may need breaks
+          every 1–2 hours while awake, plus after waking, eating, drinking,
+          or playing. Their needs change as they grow.
         </p>
         <p>
-          A structured 7-day method can accelerate this significantly by
-          building a clear routine from day one. We reviewed one{" "}
+          A seven-day plan can help establish a routine, but it cannot promise
+          a fully trained puppy in one week. We reviewed one{" "}
           <Link to="/recommend/potty-training" className="text-[#B8654A] underline">
             here
           </Link>

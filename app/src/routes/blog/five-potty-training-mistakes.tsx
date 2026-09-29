@@ -7,7 +7,7 @@ export const Route = createFileRoute("/blog/five-potty-training-mistakes")({
       {
         name: "description",
         content:
-          "Taking them out too often. Punishing after the fact. Inconsistent schedules. These are the mistakes that make potty training take twice as long.",
+          "Waiting too long between breaks. Punishing after the fact. Inconsistent schedules. Five common mistakes and gentler ways forward.",
       },
     ],
   }),
@@ -35,9 +35,9 @@ function BlogPost() {
           </h1>
 
           <p className="mt-4 text-xl text-[#5B5854]">
-            Taking them out too often. Punishing after the fact. Inconsistent
-            schedules. These are the mistakes that make potty training take
-            twice as long.
+            Waiting too long between breaks. Punishing after the fact.
+            Inconsistent schedules. Here's how to make the routine clearer
+            for your puppy.
           </p>
         </div>
 
@@ -64,32 +64,29 @@ function BlogPost() {
               for both you and your puppy.
             </p>
             <p>
-              The good news is that every one of these mistakes is easy to
-              fix. And once you do, you'll probably see improvement within
-              just a few days.
+              The good news is that a calmer, more predictable routine can
+              help. Progress takes time, and every puppy learns at a
+              different pace.
             </p>
 
-            <h2>Mistake 1: Taking them out too often</h2>
+            <h2>Mistake 1: Waiting too long between breaks</h2>
             <p>
-              "Every hour on the hour" sounds like a good plan. But here's
-              the problem: if you take a puppy out every 60 minutes, he never
-              builds up the ability to hold it. He also never develops the
-              feeling of "I need to go" that he needs to learn how to
-              communicate to you.
+              Young puppies have small bladders and may need to go out
+              frequently. Waiting for a clear signal—or for an accident—can
+              make learning harder. A quick trip outside every hour can be
+              appropriate for a very young puppy while they're awake.
             </p>
             <p>
-              Think of it like this: if you never let yourself get hungry,
-              you'd never learn to recognize when you're hungry. Same idea.
-              A puppy needs to feel the urge to go so he can learn what
-              that feeling means and what to do about it.
+              Breaks are especially useful after waking, eating, drinking,
+              and playing. Take your puppy to the same spot and reward them
+              right after they go there.
             </p>
             <p>
-              <strong>What to do instead:</strong> Start with a realistic
-              schedule based on your puppy's age. Very young puppies (8-10
-              weeks) might need to go out every 1-2 hours. Older puppies can
-              go longer. Gradually increase the time between trips as they
-              get better at holding it. The goal is building up their
-              bladder control, not preventing any feeling of urgency.
+              <strong>What to do instead:</strong> Start with frequent,
+              predictable breaks based on your puppy's age and needs. Many
+              young puppies need a chance to go every 1–2 hours while awake,
+              sometimes more often during active play. Lengthen the gap
+              gradually only as your puppy matures and stays accident-free.
             </p>
 
             <h2>Mistake 2: Punishing after the fact</h2>
@@ -189,6 +186,12 @@ function BlogPost() {
               He's not being stubborn. He's not trying to make you mad.
               He's just a puppy who needs someone to show him, clearly and
               patiently, what the rules are.
+            </p>
+            <p className="text-sm">
+              For more on age-appropriate bathroom breaks, see guidance from{" "}
+              <a href="https://www.akc.org/expert-advice/housetraining/how-to-potty-train-a-puppy/" target="_blank" rel="noopener noreferrer">the American Kennel Club</a>
+              {" "}and{" "}
+              <a href="https://vcahospitals.com/blum/know-your-pet/house-training-your-puppy" target="_blank" rel="noopener noreferrer">VCA Animal Hospitals</a>.
             </p>
           </div>
         </div>

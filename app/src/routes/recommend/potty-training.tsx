@@ -116,9 +116,9 @@ function PottyTrainingRecommend() {
             <h2 className="text-2xl font-semibold text-[#1C1B1A]">Our quick verdict</h2>
             <div className="prose-custom mt-4">
               <p>
-                This is the most complete, most practical potty training guide
-                we've found for people who work full-time and don't have hours
-                a day to dedicate to training.
+                This is a structured potty-training guide with a day-by-day
+                routine and troubleshooting ideas. It may be useful for
+                owners who want a clear plan to follow.
               </p>
               <p>
                 What we like most: the whole method is built around the idea
