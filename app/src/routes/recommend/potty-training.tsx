@@ -9,7 +9,19 @@ export const Route = createFileRoute("/recommend/potty-training")({
           content:
           "Our honest review of a 7-day structured potty training method that works with a dog's natural instincts. For puppies, adults, and rescues.",
       },
+      { property: "og:title", content: "Potty Training in 7 Days: Our Review — The Pet Story Co." },
+      {
+        property: "og:description",
+        content: "What the digital guide includes, who it may help, and the limits behind its seven-day claim. Read our affiliate review before deciding.",
+      },
+      { property: "og:url", content: "https://thepetstoryco.com/recommend/potty-training" },
+      { name: "twitter:title", content: "Potty Training in 7 Days: Our Review — The Pet Story Co." },
+      {
+        name: "twitter:description",
+        content: "What the digital guide includes, who it may help, and the limits behind its seven-day claim.",
+      },
     ],
+    links: [{ rel: "canonical", href: "https://thepetstoryco.com/recommend/potty-training" }],
   }),
   component: PottyTrainingRecommend,
 });
