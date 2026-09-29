@@ -43,7 +43,7 @@ function BlogPost() {
         <div className="mx-auto max-w-5xl px-6 pb-4">
           <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-[#D8D3C9]">
             <img
-              src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_202859_a9a3a2d1-664a-4e78-ac79-8296974de82d.png"
+              src="/images/blog-why.webp"
               alt="Puppy looking guilty beside an accident, Dad Dog watching gently"
               className="h-full w-full object-cover"
             />

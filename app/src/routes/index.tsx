@@ -35,7 +35,7 @@ function Index() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-[#D8D3C9]">
                 <img
-                  src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_202453_a9e7bf65-4df1-4b06-b0f1-04bbe9019f37.png"
+                  src="/images/hero.webp"
                   alt="Dad Dog and Puppy together in a sunlit living room"
                   className="h-full w-full object-cover"
                 />
@@ -48,8 +48,27 @@ function Index() {
         </div>
       </section>
 
-      {/* PHILOSOPHY / ABOUT */}
       <section className="border-t border-[#D8D3C9] bg-[#F3EFE7]">
+        <div className="mx-auto max-w-4xl px-6 py-16 text-center">
+          <span className="eyebrow mb-4 block">Meet the family</span>
+          <h2 className="text-3xl font-semibold tracking-tight text-[#1C1B1A] md:text-4xl">
+            Meet Dad Dog and Puppy.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-[#5B5854]">
+            A quick introduction to the characters behind our stories.
+          </p>
+          <div className="mt-8 aspect-video overflow-hidden rounded-2xl border border-[#D8D3C9] bg-[#1C1B1A]">
+            <video controls playsInline preload="metadata" poster="/images/brand-intro-poster.webp"
+              className="h-full w-full object-cover" aria-label="Meet The Pet Story Co. brand introduction">
+              <source src="/videos/meet-the-pet-story-co.mp4?v=20260929" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      {/* PHILOSOPHY / ABOUT */}
+      <section className="border-t border-[#D8D3C9] bg-[#FAF8F4]">
         <div className="mx-auto max-w-3xl px-6 py-20">
           <span className="eyebrow mb-4 block">Why stories</span>
           <h2 className="text-3xl font-semibold tracking-tight text-[#1C1B1A] md:text-4xl">
@@ -89,7 +108,7 @@ function Index() {
             <div className="overflow-hidden rounded-2xl border border-[#D8D3C9] bg-white">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_6536288c-34cf-4411-b270-9beb4ffaaa28.png"
+                  src="/images/dad.webp"
                   alt="Dad Dog, mature golden retriever"
                   className="h-full w-full object-cover"
                 />
@@ -110,7 +129,7 @@ function Index() {
             <div className="overflow-hidden rounded-2xl border border-[#D8D3C9] bg-white md:mt-12">
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_b1415888-910e-4d40-85c0-86707c365dc6.png"
+                  src="/images/puppy.webp"
                   alt="Puppy, young golden retriever"
                   className="h-full w-full object-cover"
                 />
@@ -191,7 +210,7 @@ function Index() {
           <div className="overflow-hidden rounded-2xl border border-[#D8D3C9] bg-white">
             <div className="aspect-[16/9] overflow-hidden relative">
               <img
-                src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_b1415888-910e-4d40-85c0-86707c365dc6.png"
+                src="/images/puppy.webp"
                 alt="Featured story - The Accident Wasn't His Fault"
                 className="h-full w-full object-cover"
               />
@@ -265,7 +284,7 @@ function Index() {
                 category: "Potty training",
                 url: "/blog/why-puppy-accidents-arent-his-fault",
                 image:
-                  "https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_202859_a9a3a2d1-664a-4e78-ac79-8296974de82d.png",
+                  "/images/blog-why.webp",
               },
               {
                 title: "The 5 Potty Training Mistakes Most New Owners Make",
@@ -274,7 +293,7 @@ function Index() {
                 category: "Potty training",
                 url: "/blog/five-potty-training-mistakes",
                 image:
-                  "https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_202859_f201070e-df2a-4d62-abf2-ffab10000de3.png",
+                  "/images/blog-mistakes.webp",
               },
               {
                 title: "How to Read Your Puppy's 'I Need to Go' Signals",
@@ -283,7 +302,7 @@ function Index() {
                 category: "Behavior",
                 url: "/blog/how-to-read-puppy-signals",
                 image:
-                  "https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_202859_64969042-b028-4c7f-885c-681c4ee095ef.png",
+                  "/images/blog-signals.webp",
               },
             ].map((post, i) => (
               <Link

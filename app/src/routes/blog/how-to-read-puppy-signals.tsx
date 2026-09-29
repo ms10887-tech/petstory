@@ -43,7 +43,7 @@ function BlogPost() {
         <div className="mx-auto max-w-5xl px-6 pb-4">
           <div className="aspect-[16/9] overflow-hidden rounded-2xl border border-[#D8D3C9]">
             <img
-              src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_202859_64969042-b028-4c7f-885c-681c4ee095ef.png"
+              src="/images/blog-signals.webp"
               alt="Dad Dog teaching puppy to read potty signals"
               className="h-full w-full object-cover"
             />

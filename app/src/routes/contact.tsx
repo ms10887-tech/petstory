@@ -105,18 +105,6 @@ function Contact() {
               {status === "success" && "Thanks! Your message has been sent."}
               {status === "error" && "We couldn't send your message. Please try again."}
             </p>
-            <p className="mt-4 text-center text-xs text-[#5B5854]">
-              We usually respond within 1-2 business days.
-            </p>
-          </div>
-
-          <div className="mt-10 text-center">
-            <p className="text-[#5B5854]">
-              Or email us directly at{" "}
-              <a href="mailto:hello@thepetstory.co" className="text-[#B8654A] underline">
-                hello@thepetstory.co
-              </a>
-            </p>
           </div>
         </div>
       </section>

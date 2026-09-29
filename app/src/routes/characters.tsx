@@ -35,7 +35,7 @@ function Characters() {
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 md:grid-cols-2 md:gap-16">
             <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-[#D8D3C9]">
               <img
-                src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_6536288c-34cf-4411-b270-9beb4ffaaa28.png"
+                src="/images/dad.webp"
                 alt="Dad Dog, mature golden retriever"
                 className="h-full w-full object-cover"
               />
@@ -136,7 +136,7 @@ function Characters() {
           <div className="order-1 md:order-2">
               <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-[#D8D3C9]">
                 <img
-                  src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_b1415888-910e-4d40-85c0-86707c365dc6.png"
+                  src="/images/puppy.webp"
                   alt="Puppy, young golden retriever"
                   className="h-full w-full object-cover"
                 />

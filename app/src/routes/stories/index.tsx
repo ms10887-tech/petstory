@@ -21,7 +21,7 @@ function StoriesIndex() {
       title: "The Accident Wasn't His Fault",
       excerpt:
         "Puppy keeps having accidents inside. Dad Dog sits down with him to figure out what's really going on.",
-      duration: "90 seconds",
+      duration: "35 seconds",
       topic: "Potty training",
       url: "/stories/the-accident-wasnt-his-fault",
       featured: true,
@@ -54,7 +54,7 @@ function StoriesIndex() {
               >
                 <div className="aspect-video relative overflow-hidden">
                   <img
-                    src="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_b1415888-910e-4d40-85c0-86707c365dc6.png"
+                    src="/images/puppy.webp"
                     alt="The Accident Wasn't His Fault - story thumbnail"
                     className="h-full w-full object-cover"
                   />

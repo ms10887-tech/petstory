@@ -17,22 +17,22 @@ export const Route = createFileRoute("/stories/the-accident-wasnt-his-fault")({
 function StoryPage() {
   return (
     <div className="bg-[#FAF8F4]">
-      {/* Approved brand introduction video */}
+      {/* Approved puppy story video */}
       <section className="border-b border-[#D8D3C9]">
         <div className="mx-auto max-w-4xl px-6 py-12">
           <Link to="/stories" className="text-sm text-[#B8654A] hover:underline">
             ← All stories
           </Link>
-          <div className="mt-6 aspect-video overflow-hidden rounded-2xl border border-[#D8D3C9] bg-[#1C1B1A]">
+          <div className="mx-auto mt-6 aspect-[9/16] w-full max-w-sm overflow-hidden rounded-2xl border border-[#D8D3C9] bg-[#1C1B1A]">
             <video
               controls
               playsInline
               preload="metadata"
-              poster="https://d8j0ntlcm91z4.cloudfront.net/user_3BVOCUyRScpz8iFauYUPmc87TGI/hf_20260719_201725_b1415888-910e-4d40-85c0-86707c365dc6.png"
+              poster="/images/story-poster.webp"
               className="h-full w-full object-cover"
-              aria-label="Meet The Pet Story Co. brand introduction"
+              aria-label="The Accident Wasn't His Fault puppy story"
             >
-              <source src="/videos/meet-the-pet-story-co.mp4?v=20260929" type="video/mp4" />
+              <source src="/videos/the-accident-wasnt-his-fault.mp4" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
           </div>

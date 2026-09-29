@@ -35,26 +35,25 @@ function Privacy() {
             <h2>What we collect</h2>
             <p>
               If you subscribe to our email list, we collect your email
-              address. That's it. No tracking pixels. No selling to third
-              parties. No building secret profiles.
+              address. If you use the contact form, we receive your email
+              address, selected subject, and message so we can reply.
             </p>
 
             <h2>What we use it for</h2>
             <p>
-              We use your email address to send you new stories and updates
-              from The Pet Story Co. That's the whole reason you signed up,
-              right?
+              We use newsletter addresses to send new stories and updates
+              from The Pet Story Co. We use contact-form information only to
+              respond to your message.
             </p>
             <p>
-              We'll never send you more than one email per story. No weekly
-              newsletters. No daily digests. Just a note when there's
-              something new worth your time.
+              You can unsubscribe from newsletter emails at any time using
+              the link in each email.
             </p>
 
             <h2>What we don't do</h2>
             <ul>
               <li>We don't sell your email to anyone.</li>
-              <li>We don't share your data with third parties for marketing purposes.</li>
+              <li>We use Brevo to process newsletter subscriptions and contact messages, but do not sell your information to advertisers.</li>
               <li>We don't track you across other websites.</li>
               <li>We don't send spam.</li>
             </ul>
@@ -65,17 +64,11 @@ function Privacy() {
               the list immediately. No hard feelings.
             </p>
 
-            <h2>Analytics</h2>
+            <h2>Advertising and analytics</h2>
             <p>
-              We use basic website analytics to understand how many people
-              visit the site and which pages they read. This data is
-              anonymized and used only to improve the site.
-            </p>
-
-            <h2>Cookies</h2>
-            <p>
-              We use minimal cookies to remember basic preferences. No
-              third-party advertising cookies. No cross-site tracking.
+              We do not currently install advertising pixels or use
+              third-party advertising cookies on this site. If that changes,
+              we will update this policy before using them.
             </p>
 
             <h2>Questions?</h2>
@@ -88,7 +81,7 @@ function Privacy() {
             </p>
 
             <p className="text-sm text-[#5B5854]">
-              Last updated: July 2026
+              Last updated: September 2026
             </p>
           </div>
         </div>

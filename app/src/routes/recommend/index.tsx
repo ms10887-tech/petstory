@@ -85,9 +85,9 @@ function RecommendIndex() {
       image: "/products/amazon/wellness-puppy-bites.jpg",
     },
     {
-      title: "PoochieBells Adjustable Dog Doorbell",
+      title: "PoochieBells Dog Door Bells",
       excerpt:
-        "Adjustable door bells you can teach your puppy to ring before going outside. They support a clear potty routine and can be positioned at your dog's nose height.",
+        "Door bells you can teach your puppy to ring before going outside. They can help establish a clear potty routine when used consistently.",
       category: "Potty training",
       asin: "B07NJ1YKBJ",
       type: "amazon",

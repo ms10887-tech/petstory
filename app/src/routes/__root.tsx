@@ -47,7 +47,10 @@ function toOwnAssetUrl(value: string | null | undefined): string | null {
 function buildHead(meta: AppMeta) {
   const title = meta.og_title ?? DEFAULT_TITLE;
   const description = meta.og_description ?? DEFAULT_DESCRIPTION;
-  const ogImage = toOwnAssetUrl(meta.og_image_url);
+  const imagePath = toOwnAssetUrl(meta.og_image_url);
+  const ogImage = imagePath?.startsWith("/")
+    ? `https://thepetstoryco.com${imagePath}`
+    : imagePath;
   const favicon = toOwnAssetUrl(meta.favicon_url);
   const ogVideo = toOwnAssetUrl(meta.og_video_url);
 
