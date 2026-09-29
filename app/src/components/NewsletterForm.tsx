@@ -1,35 +1,26 @@
-import { FormEvent, useState } from "react";
-import { subscribeToNewsletter } from "../lib/api/brevo.functions";
+const SIGNUP_URL =
+  "https://e4a79429.sibforms.com/v2/serve/MUIFAOIK5XZMvQ1n_4dNoHrXduIgnc53dPRzUdEQAA3vL-4CnDTuvE-_cix1OIviJASkLzqTZpY9Q9A08eToS_vOIyMXxhPyriA1lWkzXXERB8KCH1qNyWejljxV3FVVu0lNCFHRGbJGWY5D1suXBYmKTwR65QB76d-V06s3Hdcs_QIBqGFwf-ykVLi3kCGKyOa4a52ZLbo5pJidhg==";
 
 export function NewsletterForm({ compact = false }: { compact?: boolean }) {
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setStatus("loading");
-    try {
-      await subscribeToNewsletter({ data: { email, website: "" } });
-      setEmail("");
-      setStatus("success");
-    } catch {
-      setStatus("error");
-    }
-  }
-
   return (
-    <div>
-      <form className={`mx-auto flex flex-col gap-3 sm:flex-row ${compact ? "mt-6 max-w-sm" : "mt-8 max-w-md"}`} onSubmit={handleSubmit}>
-        <input type="email" name="email" required autoComplete="email" aria-label="Email address" value={email}
-          onChange={(event) => setEmail(event.target.value)} placeholder="your@email.com"
-          className={`flex-1 rounded-full border border-[#D8D3C9] bg-white px-5 text-[#1C1B1A] placeholder:text-[#5B5854]/60 focus:border-[#B8654A] focus:outline-none ${compact ? "py-2.5 text-sm" : "py-3"}`} />
-        <button type="submit" disabled={status === "loading"} className="btn-sage disabled:opacity-60">
-          {status === "loading" ? "Subscribing…" : "Subscribe"}
-        </button>
-      </form>
-      <p className={`mt-3 text-sm ${status === "error" ? "text-red-700" : "text-[#5D7257]"}`} aria-live="polite">
-        {status === "success" && "You're in! The next story will arrive in your inbox."}
-        {status === "error" && "Something went wrong. Please try again."}
+    <div className={`mx-auto w-full max-w-[540px] ${compact ? "mt-6" : "mt-8"}`}>
+      <iframe
+        title="Subscribe to The Pet Story Co. newsletter"
+        src={SIGNUP_URL}
+        loading="lazy"
+        className="h-[470px] w-full border-0 sm:h-[390px]"
+      />
+      <p className="mt-1 text-center text-xs text-[#5B5854]">
+        Form not showing?{" "}
+        <a
+          href={SIGNUP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline hover:text-[#B8654A]"
+        >
+          Open the signup form
+        </a>
+        .
       </p>
     </div>
   );

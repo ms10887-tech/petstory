@@ -85,7 +85,7 @@ function StoriesIndex() {
             ))}
           </div>
 
-          <div className="mt-16 rounded-2xl border border-dashed border-[#D8D3C9] bg-[#F3EFE7] p-12 text-center">
+          <div className="mt-16 rounded-2xl border border-dashed border-[#D8D3C9] bg-[#F3EFE7] p-6 text-center sm:p-12">
             <p className="text-sm font-medium text-[#1C1B1A]">More stories coming soon</p>
             <p className="mt-2 max-w-md mx-auto text-sm text-[#5B5854]">
               New stories every few weeks. Subscribe below and we'll email you

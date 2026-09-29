@@ -3,7 +3,6 @@ import process from "node:process";
 import { z } from "zod";
 
 const BREVO_API = "https://api.brevo.com/v3";
-const NEWSLETTER_LIST_ID = 8;
 
 function apiKey() {
   const value = process.env.BREVO_API_KEY;
@@ -22,14 +21,6 @@ async function brevo(path: string, body: unknown) {
     throw new Error("We couldn't complete that request. Please try again.");
   }
 }
-
-export const subscribeToNewsletter = createServerFn({ method: "POST" })
-  .validator(z.object({ email: z.string().trim().email(), website: z.string().max(0).optional() }))
-  .handler(async ({ data }) => {
-    if (data.website) return { ok: true };
-    await brevo("/contacts", { email: data.email.toLowerCase(), listIds: [NEWSLETTER_LIST_ID], updateEnabled: true });
-    return { ok: true };
-  });
 
 const contactSchema = z.object({
   email: z.string().trim().email(),
