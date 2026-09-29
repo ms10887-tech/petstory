@@ -32,7 +32,7 @@ function StoryPage() {
               className="h-full w-full object-cover"
               aria-label="Meet The Pet Story Co. brand introduction"
             >
-              <source src="/videos/meet-the-pet-story-co.mp4" type="video/mp4" />
+              <source src="/videos/meet-the-pet-story-co.mp4?v=20260929" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
           </div>
