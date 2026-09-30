@@ -36,14 +36,14 @@ function Privacy() {
             <h2>What we collect</h2>
             <p>
               If you subscribe to our email list, we collect your email
-              address. If you use the contact form, we receive your email
-              address, selected subject, and message so we can reply.
+              address. If you email us, we receive your address and message
+              so we can reply.
             </p>
 
             <h2>What we use it for</h2>
             <p>
               We use newsletter addresses to send new stories and updates
-              from The Pet Story Co. We use contact-form information only to
+              from The Pet Story Co. We use contact emails only to
               respond to your message.
             </p>
             <p>
@@ -54,14 +54,13 @@ function Privacy() {
             <h2>What we don't do</h2>
             <ul>
               <li>We don't sell your email to anyone.</li>
-              <li>We use Brevo to process newsletter subscriptions and contact messages, but do not sell your information to advertisers.</li>
-              <li>We don't track you across other websites.</li>
+              <li>We use Brevo to process newsletter subscriptions. Contact emails are forwarded by Namecheap to our Gmail inbox.</li>
               <li>We don't send spam.</li>
             </ul>
 
             <h2>Unsubscribing</h2>
             <p>
-              Every email has an unsubscribe link. Click it, and you're off
+              Every newsletter email has an unsubscribe link. Click it, and you're off
               the list immediately. No hard feelings.
             </p>
 
