@@ -4,6 +4,7 @@ import { Link } from "@tanstack/react-router";
 
 type MetaPixelFn = ((...args: unknown[]) => void) & {
   callMethod?: (...args: unknown[]) => void;
+  push?: MetaPixelFn;
   queue?: unknown[][];
   loaded?: boolean;
   version?: string;
@@ -12,31 +13,41 @@ type MetaPixelFn = ((...args: unknown[]) => void) & {
 declare global {
   interface Window {
     fbq?: MetaPixelFn;
+    _fbq?: MetaPixelFn;
   }
 }
 
-const configuredPixelId = import.meta.env.VITE_META_PIXEL_ID?.trim();
+const configuredPixelId = import.meta.env.VITE_META_PIXEL_ID?.trim() || "2266142897533892";
 const PIXEL_ID = configuredPixelId && /^\d+$/.test(configuredPixelId) ? configuredPixelId : "";
 export const META_PIXEL_ENABLED = Boolean(PIXEL_ID);
 const CONSENT_KEY = "petstory-meta-advertising-consent";
+let pixelInitialized = false;
 
 function startPixel() {
-  if (!PIXEL_ID || window.fbq) return;
+  if (!PIXEL_ID || pixelInitialized) return;
+  if (window.fbq) {
+    window.fbq("init", PIXEL_ID);
+    pixelInitialized = true;
+    return;
+  }
 
   const fbq = ((...args: unknown[]) => {
     if (fbq.callMethod) fbq.callMethod(...args);
     else fbq.queue?.push(args);
   }) as MetaPixelFn;
   fbq.queue = [];
+  fbq.push = fbq;
   fbq.loaded = true;
   fbq.version = "2.0";
   window.fbq = fbq;
+  window._fbq = fbq;
 
   const script = document.createElement("script");
   script.async = true;
   script.src = "https://connect.facebook.net/en_US/fbevents.js";
   document.head.appendChild(script);
   fbq("init", PIXEL_ID);
+  pixelInitialized = true;
 }
 
 export function trackGuideOfferClick() {
