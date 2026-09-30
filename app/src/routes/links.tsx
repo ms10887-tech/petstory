@@ -29,6 +29,10 @@ function LinksPage() {
           </div>
         </Link>
 
+        <h1 className="mt-8 text-3xl font-semibold tracking-tight text-[#1C1B1A]">
+          Explore The Pet Story Co.
+        </h1>
+
         {/* Links list */}
         <div className="mt-10 space-y-3">
           <Link
@@ -48,7 +52,7 @@ function LinksPage() {
           >
             <div>
               <p className="font-medium text-[#1C1B1A]">Potty training method we recommend</p>
-              <p className="text-xs text-[#5B5854]">Honest review · Affiliate</p>
+              <p className="text-xs text-[#5B5854]">Offer overview · Affiliate</p>
             </div>
             <span className="text-[#B8654A]">→</span>
           </Link>

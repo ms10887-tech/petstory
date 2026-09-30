@@ -186,14 +186,14 @@ function BlogPost() {
             Want a clear, step-by-step potty training routine?
           </h2>
           <p className="mx-auto mt-4 text-[#5B5854]">
-            We reviewed a structured 7-day method that focuses on signals,
-            timing, and consistency rather than punishment.
+            The publisher advertises a seven-day guide focused on signals,
+            timing, and consistency. We summarize the offer and its limits.
           </p>
           <Link to="/recommend/potty-training" className="btn-primary mt-8 inline-flex">
-            Read our recommendation
+            Read the offer overview
           </Link>
           <p className="mt-4 text-xs text-[#5B5854]">
-            Affiliate link · We may earn a commission at no extra cost to you
+            The overview contains affiliate links · We may earn a commission
           </p>
         </div>
       </section>

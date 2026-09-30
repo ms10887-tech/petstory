@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { META_PIXEL_ENABLED, resetAdvertisingChoice } from "../components/MetaTracking";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -66,10 +67,18 @@ function Privacy() {
 
             <h2>Advertising and analytics</h2>
             <p>
-              We do not currently install advertising pixels or use
-              third-party advertising cookies on this site. If that changes,
-              we will update this policy before using them.
+              If Meta ad measurement is enabled, we ask for your choice before
+              loading the Meta Pixel. If you allow it, Meta may receive your
+              page visits and clicks on our guide-offer links and may use
+              cookies for ad measurement. If you decline, we do not load the
+              Pixel. No purchase information is sent from our site; checkout
+              happens on the publisher's website.
             </p>
+            {META_PIXEL_ENABLED && (
+              <button type="button" onClick={resetAdvertisingChoice} className="text-[#B8654A] underline">
+                Change my advertising choice
+              </button>
+            )}
 
             <h2>Questions?</h2>
             <p>

@@ -84,7 +84,7 @@ function Disclosure() {
             </p>
 
             <p className="text-sm text-[#5B5854]">
-              Last updated: July 2026
+              Last updated: September 2026
             </p>
           </div>
         </div>

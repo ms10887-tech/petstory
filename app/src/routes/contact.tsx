@@ -103,7 +103,7 @@ function Contact() {
             </form>
             <p className={`mt-4 text-center text-sm ${status === "error" ? "text-red-700" : "text-[#5D7257]"}`} aria-live="polite">
               {status === "success" && "Thanks! Your message has been sent."}
-              {status === "error" && "We couldn't send your message. Please try again."}
+              {status === "error" && "Your message was not sent. Your text is still here—please try again later."}
             </p>
           </div>
         </div>

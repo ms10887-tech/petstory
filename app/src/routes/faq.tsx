@@ -124,7 +124,7 @@ const faqs = [
         </p>
         <p>
           A seven-day plan can help establish a routine, but it cannot promise
-          a fully trained puppy in one week. We reviewed one{" "}
+          a fully trained puppy in one week. We summarized one publisher's offer{" "}
           <Link to="/recommend/potty-training" className="text-[#B8654A] underline">
             here
           </Link>
@@ -215,9 +215,9 @@ const faqs = [
           A structured schedule is the single most important factor in potty
           training success. The{" "}
           <Link to="/recommend/potty-training" className="text-[#B8654A] underline">
-            7-day method we reviewed
+            7-day guide offer we summarized
           </Link>{" "}
-          provides a complete daily schedule.
+          advertises a daily schedule; we have not tested the paid guide.
         </p>
       </>
     ),
@@ -458,15 +458,15 @@ function FaqPage() {
             Want a complete step-by-step plan?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[#5B5854]">
-            We reviewed a structured 7-day potty training program that works
-            with a dog's natural instincts. It covers the exact schedule,
-            feeding routine, and signals to watch for — day by day.
+            The publisher advertises a seven-day potty-training guide with
+            schedules and tips for noticing your dog's signals. We explain
+            what the offer says and what we have not verified.
           </p>
           <Link to="/recommend/potty-training" className="btn-primary mt-8 inline-flex">
-            Read our full review
+            Read the offer overview
           </Link>
           <p className="mt-4 text-xs text-[#5B5854]">
-            Affiliate link · We may earn a commission at no extra cost to you
+            The overview contains affiliate links · We may earn a commission
           </p>
         </div>
       </section>

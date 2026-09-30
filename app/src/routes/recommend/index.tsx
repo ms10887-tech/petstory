@@ -38,7 +38,7 @@ function RecommendIndex() {
     {
       title: "Potty Training in 7 Days",
       excerpt:
-        "A structured 7-day method that works with a dog's natural instincts instead of against them. For puppies, rescues, and even adults who never quite got it.",
+        "The publisher advertises a seven-day training guide for busy dog owners. See our overview of the offer and the limits of its claims before deciding.",
       category: "Potty training",
       url: "/recommend/potty-training",
       type: "review",
@@ -220,7 +220,7 @@ function ProductCardContent({ rec }: { rec: Product }) {
           )}
           {rec.type === "review" ? (
             <span className="inline-flex items-center gap-1 text-sm font-medium text-[#B8654A]">
-              Read our full review
+              Read our offer overview
               <span className="transition-transform group-hover:translate-x-1">
                 →
               </span>

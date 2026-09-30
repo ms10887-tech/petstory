@@ -1,24 +1,27 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { trackGuideOfferClick } from "../../components/MetaTracking";
+
+const GUIDE_URL = "https://www.betterdailyguide.site/ds24/potty-training-in-7-days#aff=ms10887";
 
 export const Route = createFileRoute("/recommend/potty-training")({
   head: () => ({
     meta: [
-      { title: "Potty Training Method Recommendation — The Pet Story Co." },
+      { title: "Potty Training in 7 Days: Offer Overview — The Pet Story Co." },
       {
         name: "description",
           content:
-          "Our honest review of a 7-day structured potty training method that works with a dog's natural instincts. For puppies, adults, and rescues.",
+          "An independent overview of the publisher's Potty Training in 7 Days offer, its advertised contents, and the limits behind the seven-day claim.",
       },
-      { property: "og:title", content: "Potty Training in 7 Days: Our Review — The Pet Story Co." },
+      { property: "og:title", content: "Potty Training in 7 Days: Offer Overview — The Pet Story Co." },
       {
         property: "og:description",
-        content: "What the digital guide includes, who it may help, and the limits behind its seven-day claim. Read our affiliate review before deciding.",
+        content: "What the publisher says is included, who the offer may suit, and why seven days is not a guarantee. We have not tested the guide.",
       },
       { property: "og:url", content: "https://thepetstoryco.com/recommend/potty-training" },
-      { name: "twitter:title", content: "Potty Training in 7 Days: Our Review — The Pet Story Co." },
+      { name: "twitter:title", content: "Potty Training in 7 Days: Offer Overview — The Pet Story Co." },
       {
         name: "twitter:description",
-        content: "What the digital guide includes, who it may help, and the limits behind its seven-day claim.",
+        content: "An independent look at the publisher's offer and its seven-day claim. We have not tested the guide.",
       },
     ],
     links: [{ rel: "canonical", href: "https://thepetstoryco.com/recommend/potty-training" }],
@@ -45,13 +48,13 @@ function PottyTrainingRecommend() {
           </Link>
 
           <div className="mt-6">
-            <span className="eyebrow mb-4 block">Our recommendation</span>
+            <span className="eyebrow mb-4 block">Affiliate offer overview</span>
             <h1 className="text-4xl font-semibold tracking-tight text-[#1C1B1A] md:text-5xl">
               Potty Training in 7 Days
             </h1>
             <p className="mt-6 text-xl text-[#5B5854]">
-              A structured method that works with a dog's natural instincts
-              instead of punishing the confusion. Here's what we think of it.
+              What the publisher says is included, who it may suit, and what
+              to check before you buy.
             </p>
           </div>
 
@@ -60,10 +63,22 @@ function PottyTrainingRecommend() {
             <p className="text-sm text-[#5B5854]">
               <strong>Affiliate disclosure:</strong> If you buy through links on
               this page, we may earn a commission at no extra cost to you. We
-              only recommend what we believe genuinely helps. This review is our
-              honest opinion.
+              have not purchased or independently tested the guide. This page
+              evaluates the public offer, not the results of the product itself.
             </p>
           </div>
+          <a
+            href={GUIDE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={trackGuideOfferClick}
+            className="btn-primary mt-6 inline-flex"
+          >
+            View the guide offer
+          </a>
+          <p className="mt-2 text-xs text-[#5B5854]">
+            Affiliate link · Check the publisher's current price and terms before buying.
+          </p>
         </div>
       </section>
 
@@ -71,13 +86,13 @@ function PottyTrainingRecommend() {
       <section className="border-b border-[#D8D3C9] bg-white">
         <div className="mx-auto max-w-5xl px-6 py-16">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="eyebrow mb-3 block">What you receive</span>
+            <span className="eyebrow mb-3 block">Advertised bundle</span>
             <h2 className="text-2xl font-semibold text-[#1C1B1A] md:text-3xl">
-              The complete digital guide bundle
+              What the publisher says is included
             </h2>
             <p className="mt-3 text-[#5B5854]">
-              One main 7-day training system and four focused bonus guides,
-              delivered as instant PDF downloads.
+              The sales page currently advertises one main guide and four bonus
+              guides as digital PDF downloads. Confirm the bundle at checkout.
             </p>
           </div>
 
@@ -114,9 +129,9 @@ function PottyTrainingRecommend() {
           </div>
 
           <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-relaxed text-[#5B5854]">
-            Product images are shown for identification. This is a digital
-            product; no physical books are shipped. Offer contents and pricing
-            are controlled by the product publisher and may change.
+            The publisher controls the digital product, delivery, pricing, and
+            bundle contents. These cover images do not verify what is inside
+            the files. No physical books are shipped.
           </p>
         </div>
       </section>
@@ -125,30 +140,28 @@ function PottyTrainingRecommend() {
       <section className="border-b border-[#D8D3C9] bg-[#F3EFE7]">
         <div className="mx-auto grid max-w-5xl gap-10 px-6 py-16 md:grid-cols-3">
           <div className="md:col-span-2">
-            <h2 className="text-2xl font-semibold text-[#1C1B1A]">Our quick verdict</h2>
+            <h2 className="text-2xl font-semibold text-[#1C1B1A]">Our take on the offer</h2>
             <div className="prose-custom mt-4">
               <p>
-                This is a structured potty-training guide with a day-by-day
-                routine and troubleshooting ideas. It may be useful for
-                owners who want a clear plan to follow.
+                The sales page describes a day-by-day potty-training plan,
+                schedules for busy owners, and troubleshooting topics. That
+                may appeal to owners who want a written plan.
               </p>
               <p>
-                What we like most: the whole method is built around the idea
-                that dogs learn through clear, consistent patterns, not through
-                punishment. That matches exactly what we try to show in our
-                stories.
+                We like the emphasis on consistency and avoiding punishment.
+                Those ideas match the approach we show in our stories, but we
+                have not verified how well the paid guide teaches them.
               </p>
               <p>
-                What you should know: "7 days" is a guide, not a guarantee.
-                Some dogs take longer. Some have medical or behavioral issues
-                this guide can't solve. It works best when you can follow the
-                schedule consistently.
+                The publisher's seven-day promise is much stronger than we can
+                verify. Some dogs take longer, and medical or behavioral issues
+                may require a veterinarian or qualified professional.
               </p>
             </div>
           </div>
           <div className="space-y-4">
             <div className="rounded-xl border border-[#D8D3C9] bg-white p-5">
-              <p className="text-xs font-medium text-[#B8654A]">Best for</p>
+              <p className="text-xs font-medium text-[#B8654A]">May interest</p>
               <ul className="mt-3 space-y-1.5 text-sm text-[#5B5854]">
                 <li>• New puppy owners</li>
                 <li>• Busy people who work full-time</li>
@@ -162,16 +175,17 @@ function PottyTrainingRecommend() {
                 ~$19
               </p>
               <p className="mt-1 text-xs text-[#5B5854]">
-                Digital guide, one-time payment
+                Advertised price; verify the total at checkout
               </p>
             </div>
             <a
-              href="https://www.betterdailyguide.site/ds24/potty-training-in-7-days#aff=ms10887"
+              href={GUIDE_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={trackGuideOfferClick}
               className="btn-primary w-full justify-center"
             >
-              Get the method
+              View the publisher's offer
             </a>
             <p className="text-center text-xs text-[#5B5854]">
               Affiliate link · We may earn a commission
@@ -183,40 +197,22 @@ function PottyTrainingRecommend() {
       {/* What's in it */}
       <section className="border-b border-[#D8D3C9]">
         <div className="mx-auto max-w-3xl px-6 py-16">
-          <h2 className="text-2xl font-semibold text-[#1C1B1A]">What's in the method</h2>
+          <h2 className="text-2xl font-semibold text-[#1C1B1A]">What the sales page describes</h2>
           <div className="prose-custom mt-6">
             <p>
-              The guide is built around a simple 3-phase framework that
-              progresses over 7 days:
+              We have not seen the paid PDF, so these are the publisher's
+              descriptions, not independently verified contents:
             </p>
-
-            <h3>Phase 1 — Pattern establishment (Days 1-2)</h3>
+            <ul>
+              <li>A day-by-day training plan and schedules intended for busy households.</li>
+              <li>Guidance on noticing your dog's signals before an accident.</li>
+              <li>Troubleshooting topics such as nighttime accidents and setbacks.</li>
+              <li>Adjustments the publisher says are provided for different ages and homes.</li>
+            </ul>
             <p>
-              Setting up a consistent schedule that matches your dog's natural
-              elimination rhythm. Same times, same place, same cue word. No
-              punishment. No confusion. Just a clear routine.
-            </p>
-
-            <h3>Phase 2 — Signal recognition (Days 3-5)</h3>
-            <p>
-              Learning to read your dog's "I need to go" signals before the
-              accident happens. Circling, sniffing, sudden silence, heading
-              toward a corner. Most accidents are predictable if you know what
-              to watch for.
-            </p>
-
-            <h3>Phase 3 — Independence building (Days 6-7)</h3>
-            <p>
-              Moving from a strict schedule to a more flexible routine where
-              your dog communicates their needs to you. The goal is a dog who
-              tells you when they need to go, not one who depends on you
-              watching the clock.
-            </p>
-
-            <p>
-              The guide also includes bonus sections on crate training,
-              emergency cleanup and odor removal, puppy-specific modifications,
-              and strategies for apartment living without a yard.
+              The advertised bonuses cover crate training, cleanup, puppies,
+              and apartment living. The seller can change the offer, so check
+              the current checkout details before buying.
             </p>
           </div>
         </div>
@@ -225,28 +221,28 @@ function PottyTrainingRecommend() {
       {/* What we like */}
       <section className="border-b border-[#D8D3C9] bg-[#F3EFE7]">
         <div className="mx-auto max-w-3xl px-6 py-16">
-          <h2 className="text-2xl font-semibold text-[#1C1B1A]">What we like about it</h2>
+          <h2 className="text-2xl font-semibold text-[#1C1B1A]">What appeals to us about the offer</h2>
           <div className="mt-6 space-y-6">
             {[
               {
                 title: "It's built around consistency, not punishment",
-                body: "This is the biggest one. The entire method is based on preventing accidents through a clear routine, not on correcting your dog after the fact. Dogs don't understand punishment after the fact — they just learn to fear you.",
+                body: "The publisher emphasizes a consistent routine and says it avoids punishment. We support that approach, but have not assessed the paid instructions.",
               },
               {
-                title: "It's designed for busy people",
-                body: "Most potty training advice assumes you're home all day. This guide was written specifically for people who work full-time. It includes schedules that work around typical 9-to-5 hours and strategies for when you can't be there.",
+                title: "It addresses busy schedules",
+                body: "The publisher says the guide includes schedules for people who work full-time. Check the offer details to see whether the suggested routine fits your own day.",
               },
               {
-                title: "It works for all ages",
-                body: "Puppies, adult rescues, even senior dogs who never got the hang of it. The principles are the same — you just adjust the schedule and expectations. That's important for a brand that might grow into different stories.",
+                title: "It discusses different dogs",
+                body: "The offer is presented for puppies and older dogs, but their needs and progress can differ. A guide cannot promise the same outcome for every dog.",
               },
               {
                 title: "It includes the apartment / no-yard scenario",
-                body: "A lot of guides only cover houses with backyards. This one has a full section on high-rises, balconies, grass pads, and indoor alternatives.",
+                body: "The advertised bundle includes an apartment and small-space guide. Check the publisher's current bundle contents before buying.",
               },
               {
                 title: "The price is accessible",
-                body: "At roughly $19, it's cheaper than one carpet cleaning or one hour with a trainer. If it works, you've saved way more than the cost.",
+                body: "The price was approximately $19 when we checked. Confirm the current total and terms on the publisher's checkout before paying.",
               },
             ].map((item, i) => (
               <div key={i} className="rounded-xl border border-[#D8D3C9] bg-white p-6">
@@ -261,9 +257,9 @@ function PottyTrainingRecommend() {
       {/* What we don't love */}
       <section className="border-b border-[#D8D3C9]">
         <div className="mx-auto max-w-3xl px-6 py-16">
-          <h2 className="text-2xl font-semibold text-[#1C1B1A]">What we don't love</h2>
+          <h2 className="text-2xl font-semibold text-[#1C1B1A]">What gives us pause</h2>
           <p className="mt-4 text-[#5B5854]">
-            Honest review means mentioning the downsides too.
+            These points matter before choosing any paid training guide.
           </p>
           <div className="mt-6 space-y-6">
             {[
@@ -273,11 +269,11 @@ function PottyTrainingRecommend() {
               },
               {
                 title: "It's a digital PDF, not video",
-                body: "The main product is a written guide. Some people learn better from video demonstrations. The guide is clear and well-structured, but if you need to see it done, you won't find that here.",
+                body: "The offer describes a written digital guide, not video lessons. If you prefer demonstrations, check the format carefully before buying.",
               },
               {
                 title: "It requires consistency",
-                body: "This is less a criticism of the method and more a reality check. It works — if you follow it consistently. If you can't stick to the schedule for the first week, you'll see slower results.",
+                body: "Training usually takes repeated practice, and no schedule guarantees a result within a week. Your dog's needs may call for a different pace or professional advice.",
               },
             ].map((item, i) => (
               <div key={i} className="rounded-xl border border-[#D8D3C9] bg-white p-6">
@@ -293,7 +289,7 @@ function PottyTrainingRecommend() {
       <section className="border-b border-[#D8D3C9] bg-[#F3EFE7]">
         <div className="mx-auto grid max-w-5xl gap-8 px-6 py-16 md:grid-cols-2">
           <div>
-            <h3 className="text-xl font-semibold text-[#1C1B1A]">Who this is for</h3>
+            <h3 className="text-xl font-semibold text-[#1C1B1A]">Who may want to look closer</h3>
             <ul className="mt-4 space-y-3">
               {[
                 "New puppy owners who feel overwhelmed",
@@ -313,7 +309,7 @@ function PottyTrainingRecommend() {
             </ul>
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-[#1C1B1A]">Who this is NOT for</h3>
+            <h3 className="text-xl font-semibold text-[#1C1B1A]">When a guide may not be enough</h3>
             <ul className="mt-4 space-y-3">
               {[
                 "Dogs with medical issues causing accidents (see a vet first)",
@@ -339,20 +335,21 @@ function PottyTrainingRecommend() {
       <section>
         <div className="mx-auto max-w-3xl px-6 py-16 text-center">
           <h2 className="text-2xl font-semibold text-[#1C1B1A] md:text-3xl">
-            If it feels like a match, give it a try.
+            If it sounds useful, check the offer.
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-[#5B5854]">
-            It's about the cost of one carpet cleaning. And it comes with a
-            60-day money-back guarantee, so if it doesn't work for you and
-            your dog, you haven't lost anything.
+            Review the publisher's current price, bundle, and refund terms
+            before buying. The seven-day timeline is not a guaranteed result
+            for every dog.
           </p>
           <a
-            href="https://www.betterdailyguide.site/ds24/potty-training-in-7-days#aff=ms10887"
+            href={GUIDE_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackGuideOfferClick}
             className="btn-primary mt-8 inline-flex"
           >
-            Get the method
+            View the publisher's offer
           </a>
           <p className="mt-4 text-xs text-[#5B5854]">
             Affiliate link · We may earn a commission at no extra cost to you

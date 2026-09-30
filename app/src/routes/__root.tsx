@@ -12,6 +12,7 @@ import appCss from "../styles.css?url";
 import appMetaJson from "../app-meta.json";
 import { Nav } from "../components/Nav";
 import { Footer } from "../components/Footer";
+import { MetaTracking } from "../components/MetaTracking";
 
 const DEFAULT_TITLE = "The Pet Story Co.";
 const DEFAULT_DESCRIPTION =
@@ -172,6 +173,7 @@ function RootComponent() {
           <Outlet />
         </main>
         <Footer />
+        <MetaTracking />
       </div>
     </QueryClientProvider>
   );

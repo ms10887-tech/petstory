@@ -1,25 +1,14 @@
-import { useId, useState } from "react";
-
 const SIGNUP_ACTION =
   "https://e4a79429.sibforms.com/serve/MUIFAOIK5XZMvQ1n_4dNoHrXduIgnc53dPRzUdEQAA3vL-4CnDTuvE-_cix1OIviJASkLzqTZpY9Q9A08eToS_vOIyMXxhPyriA1lWkzXXERB8KCH1qNyWejljxV3FVVu0lNCFHRGbJGWY5D1suXBYmKTwR65QB76d-V06s3Hdcs_QIBqGFwf-ykVLi3kCGKyOa4a52ZLbo5pJidhg==";
 
 export function NewsletterForm({ compact = false }: { compact?: boolean }) {
-  const frameName = `newsletter-result-${useId().replace(/:/g, "")}`;
-  const [status, setStatus] = useState<"idle" | "submitting" | "sent">("idle");
-
   return (
     <div className={`mx-auto w-full max-w-[540px] ${compact ? "mt-6" : "mt-8"}`}>
-      {status === "sent" && (
-        <p role="status" className="rounded-2xl bg-white px-6 py-5 text-center text-[#302A27]">
-          Almost done! Check your inbox and click the confirmation link to join The Pet Story Co. newsletter.
-        </p>
-      )}
       <form
         action={SIGNUP_ACTION}
         method="POST"
-        target={frameName}
-        onSubmit={() => setStatus("submitting")}
-        className={status === "sent" ? "hidden" : undefined}
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <label htmlFor={`newsletter-email-${compact ? "compact" : "full"}`} className="sr-only">
           Email address for The Pet Story Co. newsletter
@@ -36,27 +25,18 @@ export function NewsletterForm({ compact = false }: { compact?: boolean }) {
           />
           <button
             type="submit"
-            disabled={status === "submitting"}
-            className="rounded-full bg-[#B8654A] px-7 py-3 font-semibold text-white transition hover:bg-[#9F5037] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B8654A] disabled:opacity-60"
+            className="rounded-full bg-[#B8654A] px-7 py-3 font-semibold text-white transition hover:bg-[#9F5037] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B8654A]"
           >
-            {status === "submitting" ? "Sending…" : "Subscribe"}
+            Subscribe
           </button>
         </div>
         <input type="text" name="email_address_check" value="" readOnly className="hidden" tabIndex={-1} aria-hidden="true" />
         <input type="hidden" name="locale" value="en" />
         <input type="hidden" name="html_type" value="simple" />
         <p className="mt-3 text-center text-xs text-[#5B5854]">
-          Check your inbox to confirm your subscription.
+          Your signup result opens in a new tab. If accepted, check your inbox to confirm.
         </p>
       </form>
-      <iframe
-        name={frameName}
-        title="Newsletter signup response"
-        className="hidden"
-        onLoad={() => {
-          if (status === "submitting") setStatus("sent");
-        }}
-      />
     </div>
   );
 }
